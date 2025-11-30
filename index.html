@@ -17,7 +17,9 @@
         </h1>
       </header>
       <main>
-        <div class="grid grid-row-2 gap-2">
+        <div
+          class="grid grid-row-3 gap-2 md:flex md:justify-center md:bg-gray-400 md:p-4 md:rounded-2xl"
+        >
           <!-- calculadora 1 programacion orientada a funciones-->
           <div id="cal1" class="bg-amber-50 rounded-lg p-4 flex flex-col gap-2">
             <div>
@@ -38,7 +40,7 @@
           </div>
 
           <!-- calculadora 2 programacion orientada a objetos-->
-          <div id="cal1" class="bg-amber-50 rounded-lg p-4 flex flex-col gap-2">
+          <div id="cal2" class="bg-amber-50 rounded-lg p-4 flex flex-col gap-2">
             <div>
               <h2 class="font-bold text-xl">Calculadora 2</h2>
             </div>
@@ -54,22 +56,24 @@
               </div>
               <div class="flex justify-center">
                 <form action="#" class="flex flex-wrap gap-2">
-                  <input
-                    type="text"
-                    id="input1"
-                    placeholder="Numero"
-                    class="h/full border p-1 rounded-sm"
-                  />
-                  <input
-                    type="text"
-                    id="input2"
-                    placeholder="Numero"
-                    class="h/full border p-1 rounded-sm"
-                  />
+                  <div class="flex gap-1 w-full">
+                    <input
+                      type="text"
+                      id="input1"
+                      placeholder="Numero"
+                      class="h-full w-full border p-1 rounded-sm"
+                    />
+                    <input
+                      type="text"
+                      id="input2"
+                      placeholder="Numero"
+                      class="h-full w-full border p-1 rounded-sm"
+                    />
+                  </div>
                   <select
                     name=""
                     id="select-operacion"
-                    class="border p-1 rounded-md"
+                    class="border p-1 rounded-md w-full"
                   >
                     <option value="+">Suma</option>
                     <option value="-">Resta</option>
@@ -84,6 +88,119 @@
               >
                 Calcular
               </button>
+            </div>
+          </div>
+          <!-- calculadora 2 programacon hibrida -->
+          <div id="cal2" class="bg-white p-2 rounded-md flex flex-col gap-3">
+            <div
+              class="bg-gray-200 p-1 rounded-md text-2xl font-bold"
+              id="consola"
+            >
+              0
+            </div>
+            <div class="p-2 flex justify-center bg-gray-400 rounded-2xl gap-2">
+              <div class="grid grid-cols-4 grid-rows-5 items-center gap-2">
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl h-fit w-fit"
+                >
+                  C
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl h-fit w-fit"
+                >
+                  j
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl h-fit w-fit"
+                >
+                  %
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl h-fit w-fit"
+                >
+                  d
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl h-fit w-fit"
+                >
+                  7
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl h-fit w-fit"
+                >
+                  8
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl h-fit w-fit"
+                >
+                  9
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl h-fit w-fit"
+                >
+                  X
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl h-fit w-fit"
+                >
+                  4
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl"
+                >
+                  5
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl"
+                >
+                  6
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl"
+                >
+                  -
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl"
+                >
+                  1
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl"
+                >
+                  2
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl"
+                >
+                  3
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl"
+                >
+                  +
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl"
+                >
+                  n
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl"
+                >
+                  0
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl"
+                >
+                  .
+                </button>
+                <button
+                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/20 text-xl"
+                >
+                  =
+                </button>
+              </div>
             </div>
           </div>
         </div>
