@@ -14,292 +14,314 @@
     ></script>
     <title>Calculadora</title>
   </head>
-  <body class="bg-gray-300 p-2">
-    <div class="wrapper flex flex-col gap-5">
-      <header class="flex justify-center mt-2">
-        <h1 class="font-bold text-2xl bg-amber-50 p-5 rounded-md">
+  <body class="bg-gray-100">
+    <div class="flex flex-col gap-5 h-full justify-between p-2">
+      <header class="flex justify-between bg-white rounded-2xl">
+        <div>
+          <i></i>
+        </div>
+        <h1 class="font-bold text-2xl p-2 text-blue-700 uppercase">
           Calculadoras
         </h1>
+        <div>
+          <i></i>
+        </div>
       </header>
 
       <main>
-        <!-- contenedor de la calculadora 1 y 2 -->
         <div
-          class="grid grid-row-2 gap-2 md:flex md:justify-center md:bg-gray-400 md:p-4 md:rounded-2xl"
+          class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-1 gap-2 ml-5 mr-5 md:ml-20 md:mr-20"
         >
           <!-- calculadora 1 programación  orientada a funciones-->
-          <div id="cal1" class="bg-amber-50 rounded-lg p-4 flex flex-col gap-2">
-            <div>
-              <h2 class="font-bold text-xl">Calculadora 1</h2>
-            </div>
-            <div class="flex flex-col gap-2">
-              <p class="bg-gray-200 rounded-md p-1">
-                Esta calculadora esta hecha con programación orientada a
-                funciones.
-              </p>
-              <button
-                onclick="iniciarCalculadora()"
-                class="border border-amber-700 rounded-md p-2 cursor-pointer bg-orange-300 text-white hover:bg-orange-500"
-              >
-                Inicar
-              </button>
-            </div>
-          </div>
-          <!-- Comentarios -->
-          <div class="flex flex-col gap-2 w-fit h-fit">
-            <p
-              class="md:bg-gray-300 bg-gray-100 border border-gray-300 p-2 rounded-md flex flex-col border-l-green-500 border-l-3 w-fit md:w-70"
+          <div class="flex flex-col gap-2 bg-white p-4 rounded-2xl">
+            <!-- Comentarios -->
+            <div
+              class="flex items-center gap-2 w-full bg-blue-100 border border-blue-300 p-2 rounded-md border-l-blue-500 border-l-3"
             >
-              <span class="font-bold">La calculadora 1</span> sin duda fue la
-              más fastidiosa, tanto que hasta el día de hoy tengo dolor de
-              cabeza solo por pensar en ella.
-              <span class="italic">Ja, ja, ja</span>
-            </p>
-          </div>
-
-          <!-- calculadora 2 programación  orientada a objetos-->
-          <div id="cal2" class="bg-amber-50 rounded-lg p-4 flex flex-col gap-2">
-            <div>
-              <h2 class="font-bold text-xl">Calculadora 2</h2>
-            </div>
-            <div class="flex flex-col gap-2">
-              <p class="bg-gray-200 rounded-md p-3">
-                Esta calculadora esta hecha con programación orientda a objetos.
+              <i class="fa-solid fa-exclamation text-blue-500"></i>
+              <p>
+                <span class="font-bold">La calculadora 1</span> sin duda fue la
+                más fastidiosa, tanto que hasta el día de hoy tengo dolor de
+                cabeza solo por pensar en ella.
+                <span class="italic">Ja, ja, ja</span>
               </p>
-              <div class="border border-gray-300 rounded-md bg-gray-200 p-2">
-                <h3 class="italic font-bold">Resultado</h3>
-                <div id="pantalla" class="bg-amber-100 rounded-md p-3">
-                  <p id="resultado" class="font-bold text-xl">0</p>
+            </div>
+            <div
+              id="cal1"
+              class="bg-blue-200 rounded-lg p-4 flex flex-col gap-2"
+            >
+              <div>
+                <h2 class="font-bold text-xl">Calculadora 1</h2>
+              </div>
+              <div class="flex flex-col gap-2">
+                <p class="bg-gray-100 rounded-md p-1">
+                  Esta calculadora esta hecha con programación orientada a
+                  funciones.
+                </p>
+                <button
+                  onclick="iniciarCalculadora()"
+                  class="border border-blue-700 rounded-md p-2 cursor-pointer bg-blue-300 text-white hover:bg-blue-500"
+                >
+                  Inicar
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- calculadora 2 programación  orientada a objetos-->
+          <div class="flex flex-col gap-2 w-full bg-white p-4 rounded-2xl">
+            <!-- Comentarios -->
+            <div class="flex flex-col gap-2">
+              <p
+                class="bg-orange-100 border border-orange-300 p-2 rounded-md flex flex-col border-l-orange-500 border-l-3 w-full"
+              >
+                <span class="font-bold">La calculadora 2 </span> tiene un nivel
+                de complejidad bastante alto, pero me gusto hacerla
+              </p>
+            </div>
+            <div
+              id="cal2"
+              class="bg-orange-300 rounded-lg p-4 flex flex-col gap-2"
+            >
+              <div>
+                <h2 class="font-bold text-xl">Calculadora 2</h2>
+              </div>
+              <div class="flex flex-col gap-2">
+                <p class="bg-gray-50 rounded-md p-3">
+                  Esta calculadora esta hecha con programación orientda a
+                  objetos.
+                </p>
+                <div class="border border-gray-100 rounded-md bg-gray-50 p-2">
+                  <h3 class="italic font-bold">Resultado</h3>
+                  <div id="pantalla" class="bg-gray-100 rounded-md p-3">
+                    <p id="resultado" class="font-bold text-xl">0</p>
+                  </div>
                 </div>
+                <div class="flex justify-center">
+                  <form action="#" class="flex flex-wrap gap-2">
+                    <div class="flex gap-1 w-full">
+                      <input
+                        type="text"
+                        id="input1"
+                        placeholder="Ej: 2"
+                        class="h-full w-full border border-amber-500 p-1 rounded-sm bg-white"
+                      />
+                      <input
+                        type="text"
+                        id="input2"
+                        placeholder="Ej: 3"
+                        class="h-full w-full border p-1 rounded-sm border-amber-500 bg-white"
+                      />
+                    </div>
+                    <select
+                      name="Opciones"
+                      id="select-operacion"
+                      class="border p-1 rounded-md w-full bg-white border-amber-500"
+                    >
+                      <option value="+">Suma</option>
+                      <option value="-">Resta</option>
+                      <option value="*">Multiplicacion</option>
+                      <option value="/">Divicion</option>
+                    </select>
+                  </form>
+                </div>
+                <button
+                  id="btn-2"
+                  class="border border-green-700 rounded-md p-2 cursor-pointer bg-green-300 text-white font-bold hover:bg-green-700"
+                >
+                  Calcular
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- contenedor de la calculadora 3  -->
+          <div class="md:col-span-2">
+            <div class="flex flex-col gap-2 w-full bg-white p-4 rounded-2xl">
+              <!-- Comentarios -->
+              <div class="flex flex-col gap-2">
+                <p
+                  class="bg-blue-100 border border-blue-300 p-2 rounded-md flex flex-col w-full border-l-blue-500 border-l-3"
+                >
+                  Esta calculadora fue desarrollada con programación orientada a
+                  eventos.
+                </p>
+                <p
+                  class="bg-green-100 border border-green-300 p-2 rounded-md flex flex-col w-full border-l-green-500 border-l-3"
+                >
+                  A pesar de que esta fue la última y más compleja, fue la que
+                  más me gusto hacer.
+                  <span class="italic"
+                    >(la primera fue… la que menos me gusto hacer)</span
+                  >
+                </p>
               </div>
               <div class="flex justify-center">
-                <form action="#" class="flex flex-wrap gap-2">
-                  <div class="flex gap-1 w-full">
-                    <input
-                      type="text"
-                      id="input1"
-                      placeholder="Ej: 2"
-                      class="h-full w-full border p-1 rounded-sm"
-                    />
-                    <input
-                      type="text"
-                      id="input2"
-                      placeholder="Ej: 3"
-                      class="h-full w-full border p-1 rounded-sm"
-                    />
-                  </div>
-                  <select
-                    name="Opciones"
-                    id="select-operacion"
-                    class="border p-1 rounded-md w-full"
+                <!-- calculadora 3 programacon hibrida -->
+                <div
+                  id="cal2"
+                  class="bg-blue-500 p-3 rounded-md flex flex-col gap-3 w-full md:w-fit"
+                >
+                  <div
+                    class="bg-white p-1 rounded-md text-2xl font-bold"
+                    id="consola"
                   >
-                    <option value="+">Suma</option>
-                    <option value="-">Resta</option>
-                    <option value="*">Multiplicacion</option>
-                    <option value="/">Divicion</option>
-                  </select>
-                </form>
-              </div>
-              <button
-                id="btn-2"
-                class="border border-green-700 rounded-md p-2 cursor-pointer bg-green-300 text-white font-bold hover:bg-green-700"
-              >
-                Calcular
-              </button>
-            </div>
-          </div>
-          <!-- Comentarios -->
-          <div class="flex flex-col gap-2">
-            <p
-              class="md:bg-gray-300 bg-gray-100 border border-gray-300 p-2 rounded-md flex flex-col border-l-orange-500 border-l-3 w-fit md:w-70"
-            >
-              <span class="font-bold">La calculadora 2 </span> tiene un nivel de
-              complejidad bastante alto, pero me gusto hacerla
-            </p>
-          </div>
-        </div>
-        <!-- contenedor de la calculadora 3  -->
-        <div
-          class="flex flex-col md:flex-row gap-2 justify-center mt-2 md:bg-gray-400 md:p-4 md:rounded-2xl"
-        >
-          <!-- calculadora 3 programacon hibrida -->
-          <div
-            id="cal2"
-            class="bg-white p-3 rounded-md flex flex-col gap-3 w-full md:w-fit"
-          >
-            <div
-              class="bg-gray-200 p-1 rounded-md text-2xl font-bold"
-              id="consola"
-            >
-              0
-            </div>
-            <div class="p-2 flex justify-center bg-gray-400 rounded-2xl gap-2">
-              <div class="grid grid-cols-4 grid-rows-5 items-center gap-2">
-                <button
-                  value="ac"
-                  class="border border-red-400 text-red-500 p-3 rounded-md backdrop-blur-md bg-red-300 text-xl cursor-pointer hover:bg-red-400"
-                >
-                  C
-                </button>
-                <button
-                  value="eliminar"
-                  class="border border-red-400 text-red-400 p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  <i class="fa-solid fa-delete-left"></i>
-                </button>
-                <button
-                  value="%"
-                  class="border border-orange-400 text-orange-400 p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  <i class="fa-solid fa-percent"></i>
-                </button>
-                <button
-                  value="/"
-                  class="border border-orange-400 text-orange-400 p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  <i class="fa-solid fa-divide"></i>
-                </button>
-                <button
-                  value="7"
-                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  7
-                </button>
-                <button
-                  value="8"
-                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  8
-                </button>
-                <button
-                  value="9"
-                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  9
-                </button>
-                <button
-                  value="*"
-                  class="border border-orange-400 text-orange-400 p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-                <button
-                  value="4"
-                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  4
-                </button>
-                <button
-                  value="5"
-                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  5
-                </button>
-                <button
-                  value="6"
-                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  6
-                </button>
-                <button
-                  value="-"
-                  class="border border-orange-400 text-orange-400 p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  <i class="fa-solid fa-minus"></i>
-                </button>
-                <button
-                  value="1"
-                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  1
-                </button>
-                <button
-                  value="2"
-                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  2
-                </button>
-                <button
-                  value="3"
-                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  3
-                </button>
-                <button
-                  value="+"
-                  class="border border-orange-400 text-orange-400 p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  <i class="fa-solid fa-plus"></i>
-                </button>
-                <button
-                  value="n"
-                  class="border border-orange-400 text-orange-400 p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  n
-                </button>
-                <button
-                  value="0"
-                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  0
-                </button>
-                <button
-                  value="."
-                  class="border border-white text-white p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-white/20"
-                >
-                  .
-                </button>
-                <button
-                  value="="
-                  class="border border-orange-700 text-orange-700 p-3 rounded-md backdrop-blur-md bg-orange-300 text-xl cursor-pointer hover:bg-orange-400"
-                >
-                  =
-                </button>
+                    0
+                  </div>
+                  <div
+                    class="p-2 flex justify-center bg-gray-200 rounded-2xl gap-2"
+                  >
+                    <div class="grid grid-cols-4 grid-rows-5 gap-2">
+                      <button
+                        value="ac"
+                        class="border border-red-400 text-red-500 p-3 rounded-md backdrop-blur-md bg-red-300 text-xl cursor-pointer hover:bg-red-400"
+                      >
+                        C
+                      </button>
+                      <button
+                        value="eliminar"
+                        class="border border-red-400 text-red-400 p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-red-200"
+                      >
+                        <i class="fa-solid fa-delete-left"></i>
+                      </button>
+                      <button
+                        value="%"
+                        class="border border-orange-400 text-orange-400 p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-orange-100"
+                      >
+                        <i class="fa-solid fa-percent"></i>
+                      </button>
+                      <button
+                        value="/"
+                        class="border border-orange-400 text-orange-400 p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-orange-100"
+                      >
+                        <i class="fa-solid fa-divide"></i>
+                      </button>
+                      <button
+                        value="7"
+                        class="border border-blue-400 text-blue-500 p-3 rounded-md bg-blue-200 text-xl cursor-pointer hover:bg-blue-300"
+                      >
+                        7
+                      </button>
+                      <button
+                        value="8"
+                        class="border border-blue-400 text-blue-500 p-3 rounded-md bg-blue-200 text-xl cursor-pointer hover:bg-blue-300"
+                      >
+                        8
+                      </button>
+                      <button
+                        value="9"
+                        class="border border-blue-400 text-blue-500 p-3 rounded-md bg-blue-200 text-xl cursor-pointer hover:bg-blue-300"
+                      >
+                        9
+                      </button>
+                      <button
+                        value="*"
+                        class="border border-orange-400 text-orange-400 p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-orange-100"
+                      >
+                        <i class="fa-solid fa-xmark"></i>
+                      </button>
+                      <button
+                        value="4"
+                        class="border border-blue-400 text-blue-500 p-3 rounded-md bg-blue-200 text-xl cursor-pointer hover:bg-blue-300"
+                      >
+                        4
+                      </button>
+                      <button
+                        value="5"
+                        class="border border-blue-400 text-blue-500 p-3 rounded-md bg-blue-200 text-xl cursor-pointer hover:bg-blue-300"
+                      >
+                        5
+                      </button>
+                      <button
+                        value="6"
+                        class="border border-blue-400 text-blue-500 p-3 rounded-md bg-blue-200 text-xl cursor-pointer hover:bg-blue-300"
+                      >
+                        6
+                      </button>
+                      <button
+                        value="-"
+                        class="border border-orange-400 text-orange-400 p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-orange-100"
+                      >
+                        <i class="fa-solid fa-minus"></i>
+                      </button>
+                      <button
+                        value="1"
+                        class="border border-blue-400 text-blue-500 p-3 rounded-md bg-blue-200 text-xl cursor-pointer hover:bg-blue-300"
+                      >
+                        1
+                      </button>
+                      <button
+                        value="2"
+                        class="border border-blue-400 text-blue-500 p-3 rounded-md bg-blue-200 text-xl cursor-pointer hover:bg-blue-300"
+                      >
+                        2
+                      </button>
+                      <button
+                        value="3"
+                        class="border border-blue-400 text-blue-500 p-3 rounded-md bg-blue-200 text-xl cursor-pointer hover:bg-blue-300"
+                      >
+                        3
+                      </button>
+                      <button
+                        value="+"
+                        class="border border-orange-400 text-orange-400 p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-orange-100"
+                      >
+                        <i class="fa-solid fa-plus"></i>
+                      </button>
+                      <button
+                        value="n"
+                        class="border border-orange-400 text-orange-400 p-3 rounded-md backdrop-blur-md bg-white/30 text-xl cursor-pointer hover:bg-orange-100"
+                      >
+                        n
+                      </button>
+                      <button
+                        value="0"
+                        class="border border-blue-400 text-blue-500 p-3 rounded-md bg-blue-200 text-xl cursor-pointer hover:bg-blue-300"
+                      >
+                        0
+                      </button>
+                      <button
+                        value="."
+                        class="border border-green-400 text-green-500 p-3 rounded-md bg-green-200 text-xl cursor-pointer hover:bg-green-300"
+                      >
+                        .
+                      </button>
+                      <button
+                        value="="
+                        class="border border-orange-500 text-orange-700 p-3 rounded-md backdrop-blur-md bg-orange-200 text-xl cursor-pointer hover:bg-orange-400"
+                      >
+                        =
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Comentarios -->
-          <div class="flex flex-col gap-2">
-            <p
-              class="md:bg-gray-300 bg-gray-100 border border-gray-300 p-2 rounded-md flex flex-col w-fit border-l-red-500 border-l-3"
-            >
-              Esta calculadora fue desarrollada con programación orientada a
-              eventos.
-            </p>
-            <p
-              class="md:bg-gray-300 bg-gray-100 border border-gray-300 p-2 rounded-md flex flex-col w-fit border-l-orange-500 border-l-3"
-            >
-              A pesar de que esta fue la última y más compleja, fue la que más
-              me gusto hacer.
-              <span class="italic"
-                >(la primera fue… la que menos me gusto hacer)</span
-              >
-            </p>
           </div>
         </div>
       </main>
+      <!-- pie de pagina -->
+      <footer
+        class="bg-blue-800 p-3 mt-2 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-3 text-white"
+      >
+        <p class="font-bold text-xl text-center">
+          Desarrollado por Bryant Facenda 2025
+        </p>
+        <p>V-1.2.02025</p>
+        <ul class="flex gap-2 text-xl">
+          <li class="hover:bg-white hover:text-black p-2 rounded-2xl">
+            <a href="https://github.com/Bafaf23">
+              <i class="fa-brands fa-github"></i>
+              GitHub</a
+            >
+          </li>
+          <li class="hover:bg-white hover:text-black p-2 rounded-2xl">
+            <a href="https://www.instagram.com/bafaf03/">
+              <i class="fa-brands fa-instagram"></i>Instagram</a
+            >
+          </li>
+        </ul>
+      </footer>
     </div>
-    <!-- pie de pagina -->
-    <footer
-      class="bg-white p-3 mt-2 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-3"
-    >
-      <p class="font-bold text-cyan-500 text-xl text-center">
-        Desarrollado por Bryant Facenda 2025
-      </p>
-      <ul class="flex gap-2 text-xl">
-        <li class="hover:bg-gray-200 p-2 rounded-2xl">
-          <a href="https://github.com/Bafaf23">
-            <i class="fa-brands fa-github"></i>
-            GitHub</a
-          >
-        </li>
-        <li class="hover:bg-gray-200 p-2 rounded-2xl">
-          <a href="https://www.instagram.com/bafaf03/">
-            <i class="fa-brands fa-instagram"></i>Instagram</a
-          >
-        </li>
-      </ul>
-    </footer>
+
     <!-- JS de calculadora 1 -->
     <script src="js/calculator-function.js"></script>
     <!-- JS de calculadora 2 -->
