@@ -12,7 +12,7 @@
  * resultado en un alert().
  **/
 
-function suma(a, b) {
+/* function suma(a, b) {
   let suma = a + b;
   return suma;
 }
@@ -99,4 +99,30 @@ function iniciarCalculadora() {
       alert("ingresa un una opcion del 1 al 5");
     }
   } while (operador !== "5");
+} */
+
+function iniciarCalculadora() {
+  // 1. Pide al usuario que ingrese una cadena de texto (la operación)
+  let operacion = prompt("Dime una operacion: (ej: 10*5+4)");
+
+  // 2. Muestra la operación ingresada en la consola para depuración
+  console.log(operacion);
+
+  // 3. Intenta ejecutar el bloque de código
+  try {
+    // Intenta evaluar la cadena usando la función 'evaluate' de la librería Math.js
+    // Si 'operacion' no es una expresión matemática válida, 'math.evaluate' lanzará un error
+    const resultado = math.evaluate(operacion);
+
+    // Si la evaluación es exitosa, muestra el resultado
+    console.log("El resultado es:", resultado);
+    alert("El resultado es: " + resultado);
+  } catch (error) {
+    // Si 'math.evaluate' lanzó un error (por ejemplo, si el usuario escribió "hola"),
+    // este bloque 'catch' se ejecuta.
+    alert(`Hubo un error en procesar ${operacion}`);
+    console.log(`Hubo un error en procesar ${operacion}` + error);
+    // Opcionalmente, podrías mostrar una alerta al usuario también:
+    // alert("Error: La operación no es válida.");
+  }
 }

@@ -2,57 +2,39 @@
  * orientada a objetos (clases). Se recomienda obtener los
  * valores de los inputs desde un formulario HTML y mostrar
  * el resultado en el DOM. */
-
 class Calculadora {
-  constructor(input1, input2) {
-    this.valor1 = input1;
-    this.valor2 = input2;
+  constructor(input) {
+    this.valor = input;
   }
 
-  suma() {
-    let valor1 = this.valor1;
-    let valor2 = this.valor2;
-
-    const resultado = valor1 + valor2;
-    return resultado;
-  }
-
-  resta() {
-    let valor1 = this.valor1;
-    let valor2 = this.valor2;
-
-    const resultado = valor1 - valor2;
-    return resultado;
-  }
-
-  multiplicacion() {
-    let valor1 = this.valor1;
-    let valor2 = this.valor2;
-
-    const resultado = valor1 * valor2;
-    return resultado;
-  }
-
-  division() {
-    let valor1 = this.valor1;
-    let valor2 = this.valor2;
-    if (valor2 === 0) {
-      return;
-    } else {
-      const resultado = valor1 / valor2;
+  operation() {
+    let operacion = this.valor;
+    try {
+      const resultado = math.evaluate(operacion);
       return resultado;
+    } catch (error) {
+      console.log(`Hubo un error en procesar ${operacion}` + error);
     }
   }
 }
 
 function mensaje(mensaje) {
-  return (document.getElementById("resultado").textContent = mensaje);
+  let pan = (document.getElementById("resultado").textContent = mensaje);
   /* mostar.innerHTML = `<p id="resultado" class="font-bold text-xl">${mensaje}</p>`;
   if (alerResultdo) alerResultdo.remove();
-  pantalla.appendChild(mostar); */
+  pantalla.appendChild(mostar);*/
 }
 
 function operacion() {
+  let input = document.getElementById("input2").value;
+
+  let calculo = new Calculadora(input);
+  let resultado = calculo.operation();
+
+  return mensaje(resultado);
+}
+
+/* function operacion() {
   let input1 = parseFloat(document.getElementById("input1").value);
   let input2 = parseFloat(document.getElementById("input2").value);
   let selec = document.getElementById("select-operacion").value;
@@ -96,7 +78,7 @@ function operacion() {
     }
     return mensaje(resultado.toFixed(4));
   }
-}
+} */
 
 let btn = document.getElementById("btn-2");
 
